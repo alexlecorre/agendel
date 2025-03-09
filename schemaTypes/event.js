@@ -7,16 +7,8 @@ export default {
       name: 'sliderTags',
       title: 'Tags pour les sliders',
       type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Nouvelles sorties', value: 'last_releases'},
-          {title: 'Expos du moment', value: 'current_exhibitions'},
-          {title: 'Sorties théâtre', value: 'theater_events'},
-        ],
-      },
-    }, // ❌ Problème ici : il manquait une virgule pour fermer correctement cet objet
-
+      of: [{type: 'string'}], // ✅ Garde ça simple pour stocker plusieurs tags
+    },
     {
       name: 'title',
       title: 'Titre',
