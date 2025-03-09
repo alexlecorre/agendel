@@ -4,15 +4,29 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'tag',
-      title: 'Tag pour le slider',
-      type: 'string',
-      description: "Tag pour catégoriser l'événement dans un slider spécifique",
-    },
+      name: 'sliderTags',
+      title: 'Tags pour les sliders',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: [
+          {title: 'Nouvelles sorties', value: 'last_releases'},
+          {title: 'Expos du moment', value: 'current_exhibitions'},
+          {title: 'Sorties théâtre', value: 'theater_events'},
+        ],
+      },
+    }, // ❌ Problème ici : il manquait une virgule pour fermer correctement cet objet
+
     {
       name: 'title',
       title: 'Titre',
       type: 'string',
+    },
+    {
+      name: 'image',
+      title: 'Image de l’événement',
+      type: 'image',
+      options: {hotspot: true},
     },
     {
       name: 'venue',

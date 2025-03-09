@@ -9,6 +9,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'image',
+      title: 'Image de l’événement',
+      type: 'image',
+      options: {hotspot: true},
+    },
+    {
       name: 'name',
       title: 'Nom du lieu',
       type: 'string',
